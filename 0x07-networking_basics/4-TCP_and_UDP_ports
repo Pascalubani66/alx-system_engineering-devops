@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Use ss command for detailed socket information
+printf "Port\tPID\tProgram Name\n"
+ss -nlp | grep LISTEN | awk '{print $4,$7,$8}'
